@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Index</title>
+    <script>
+        $(document).ready(function () {
+            debugger;
+            if (sessionStorage.getItem("LoginUserID") == null) {
+                window.location.href = 'Login.html';
+            }
+            $('#btnLogout').click(function () {
+                sessionStorage.clear();
+                window.location.href = 'Login.html';
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>This is Index Page</h1>
+    <input type="submit" value="Logout" id="btnLogout" />
+</body>
+</html>
